@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>学术主页</title>
+<meta name="description" content="个人学术主页">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 顶部导航 -->
+<header class="site-header">
+  <div class="container nav">
+    <a href="#" class="nav-brand" id="navBrand">Academia</a>
+    <button class="nav-toggle" id="navToggle" aria-label="菜单">☰</button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">关于</a>
+      <a href="#research">研究</a>
+      <a href="#publications">论文</a>
+      <a href="#teaching">教学</a>
+      <a href="#contact">联系</a>
+    </nav>
+  </div>
+</header>
+
+<!-- 头部资料卡 -->
+<section class="hero">
+  <div class="container hero-inner">
+    <img class="avatar" id="avatarImg" alt="头像" style="display:none">
+    <div class="avatar" id="avatarLetter" style="display:flex"></div>
+    <div style="flex:1;min-width:0">
+      <h1 class="hero-name" id="name"></h1>
+      <div class="hero-nameen" id="nameEn"></div>
+      <div class="hero-headline" id="headline"></div>
+      <div class="hero-affil" id="affiliation"></div>
+      <div class="hero-affil-en" id="affiliationEn"></div>
+      <div class="hero-tagline" id="tagline"></div>
+      <div class="hero-actions" id="heroActions"></div>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+  <!-- 关于 -->
+  <section class="block" id="about">
+    <h2 class="block-title">关于</h2>
+    <p class="block-sub">About</p>
+    <div class="about-grid">
+      <div class="about-prose" id="aboutProse"></div>
+      <ul class="highlights" id="highlights"></ul>
+    </div>
+  </section>
+
+  <!-- 研究方向 -->
+  <section class="block" id="research">
+    <h2 class="block-title">研究方向</h2>
+    <p class="block-sub">Research</p>
+    <div class="research-grid" id="researchGrid"></div>
+  </section>
+
+  <!-- 论文发表 -->
+  <section class="block" id="publications">
+    <h2 class="block-title">论文发表</h2>
+    <p class="block-sub" id="pubSub">Publications</p>
+    <div id="publicationsWrap"></div>
+  </section>
+
+  <!-- 教学 / 荣誉 / 服务 -->
+  <section class="block" id="teaching">
+    <h2 class="block-title">教学、荣誉与服务</h2>
+    <p class="block-sub">Teaching · Awards · Service</p>
+    <div class="two-col">
+      <div>
+        <h3 class="col-title">教学经历</h3>
+        <div id="teachingWrap"></div>
+        <h3 class="col-title" style="margin-top:26px">荣誉奖项</h3>
+        <ul class="badge-list" id="awardsWrap"></ul>
+      </div>
+      <div>
+        <h3 class="col-title">学术服务</h3>
+        <ul class="badge-list" id="serviceWrap"></ul>
+        <h3 class="col-title" style="margin-top:26px">联系方式</h3>
+        <div id="contactWrap" style="font-size:14.5px;color:var(--ink-2)"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 页脚 -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <span class="muted" id="footerText"></span>
+    <span class="footer-links" id="footerLinks"></span>
+  </div>
+</footer>
+
+<!-- 编辑入口 -->
+<button class="edit-fab" id="editFab" title="编辑内容" aria-label="编辑内容">⚙</button>
+
+<!-- 渲染逻辑 -->
+<script src="js/data.js"></script>
+<script src="js/render.js"></script>
+<script src="js/editor.js"></script>
+</body>
+</html>
